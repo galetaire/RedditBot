@@ -1,0 +1,55 @@
+---
+# Cagareddit1
+    type: comment
+    body (includes-word): ['cops=14']
+    is_top_level: true
+    comment_locked: true
+    parent_submission: 
+        overwrite_flair: true
+        set_flair: ['{{author}} ha fet cagar El Tió!']
+        set_locked: true
+    comment: |
+        Arengades per tu!, i per tu!, HAHAHA, tu també en vols {{author}}?, doncs prepara't... vatua l’olla!, m'has donat la garrotada mestra! Enhorabona, m'has fet cagar i has guanyat [4 setmanes de Reddit premium!](https://i.pinimg.com/originals/1d/be/e7/1dbee79acc0bce37644ba3b283f4d767.gif)
+    message: Enhorabona {{author}} pel premi!
+---
+# Cagareddit1
+    type: comment
+    body (includes-word): ['cops=1', 'cops=3', 'cops=5', 'cops=7', 'cops=9']
+    is_top_level: true
+    comment: |
+        Arengades per tu {{author}}! HAHAHA, un altre COP serà, HAHAHA!
+---
+# Cagareddit1
+    type: comment
+    body (includes-word): ['cops=10', 'cops=12', 'cops=18', 'cops=19']
+    is_top_level: true
+    comment: |
+        Aiguaaa! La que necessitaràs per menjar-te les arengades {{author}}! HAHAHA!
+---
+# Cagareddit1
+    type: comment
+    body (includes-word): ['cops=21', 'cops=23', 'cops=25', 'cops=27', 'cops=29']
+    is_top_level: true
+    comment: |
+        Que algú li digui a {{author}} que es tracta de donar cops, no abraçades, HAHAHA!
+---
+# Cagareddit1
+    type: comment
+    body (includes-word): ['cops=30', 'cops=32', 'cops=34', 'cops=37', 'cops=38']
+    is_top_level: true
+    comment: |
+        Em caus bé {{author}}, per això em costa mandar-te a cagar a la via, HAHAHA! Següent!
+---
+# Cagareddit1
+    type: comment
+    body (includes-word): ['cops=41', 'cops=43', 'cops=45', 'cops=47', 'cops=49']
+    is_top_level: true
+    comment: |
+        Escolta {{author}}, en confiança, o pegues més fort o emigra.
+---
+# Cagareddit1
+    type: comment
+    body (includes-word): ['cops=50', 'cops=51', 'cops=52', 'cops=54', 'cops=60']
+    is_top_level: true
+    comment: |
+        Et falta força {{author}}, pel 2022 menja més botifarra de pagès! HAHAHA 
