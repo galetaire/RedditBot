@@ -1,4 +1,4 @@
-# (1)automessage
+# automissatge
     type: submission
     author:
         name: ['Merkaartor', 'SoulBK', 'Liface']
@@ -11,31 +11,29 @@
    * La paraula secreta surt d'organitzar les lletres subratllades en taronja.
    * Qui encerti la paraula secreta se'n durà un mes de reddit premium i 700 monedes.
 ---
-# (2)answers
+# paraules
+    type: comment
+    body (starts-with): ['1=Clot', '2=Aplec', '3=Altiplà', '4=Glacera', '5=Brega', '6=Peatge', '7=Tuf', '8=Maonesa', '9=Tempesta', '10=Rebesnets']
+    comment: La teva resposta és correcta!
+    ---
+# paraula secreta
     type: comment
     body (starts-with): ['1=Clot', '2=Aplec', '3=Altiplà', '4=Glacera', '5=Brega', '6=Peatge', '7=Tuf', '8=Maonesa', '9=Tempesta', '10=Rebesnets']
     comment: La teva resposta és correcta!
 ---
-# (3)solutions
+# solucions
     type: comment
     body (includes): ['solució', 'solucions']
     comment: Les solucions són >!'1=Clot', '2=Aplec', '3=Altiplà', '4=Glacera', '5=Brega', '6=Peatge', '7=Tuf', '8=Maonesa', '9=Tempesta', '10=Rebesnets'!<
 ---
-# (4)flair update
+# pendents
     type: comment
     body (includes): ["Pendent:", "Pendents:"]
     parent_submission: 
            set_flair: ["{{body}}"]
            overwrite_flair: true
 ---
-# (5)flair solved 
-    type: comment
-    body (includes): ["Resolt", "resolt", "Resolt!"]
-    parent_submission: 
-           set_flair: "Resolt"
-           overwrite_flair: true
----
-# (6)comments new
+# ordre comentaris nous
     type: submission
     author:
         name: ['Merkaartor', 'SoulBK', 'Liface']
