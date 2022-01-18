@@ -1,0 +1,36 @@
+# Coet, botó correcte
+    type: comment
+    body (includes-word): ['botó=vermell']
+    is_top_level: true
+    comment_locked: true
+    parent_submission:
+        overwrite_flair: true
+        set_flair: ['{{author}} ha activat la ignició!']
+        set_locked: true
+    comment: "\
+         Activant ignició... \U0001F680 \U0001F680 \U0001F680 \U0001F680 Destí: La lluna! \U0001F313 . Enhorabona {{author}}!, has aconseguit un mes de reddit premium i 700 monedes!"
+---
+# Coet, botó erroni
+    type: comment
+    body (includes-word): ['botó=blau', 'botó=vermell', 'botó=groc', 'botó=verd', 'botó=rosa', 'botó=taronja', 'botó=blanc', 'botó=gris', 'botó=porpra', 'botó=marró', 'botó=negre', 'botó=salmó', 'botó=fúcsia', 'botó=or', 'botó=morat', 'botó=turquesa', 'botó=cendra', 'botó=bronze', 'botó=perla', 'botó=oliva']
+    is_top_level: true
+    parent_submission:
+        overwrite_flair: true
+        set_flair: ['El coet on anava {{author}} ha explotat..., Al cel sia']
+    author:
+        overwrite_flair: true
+        set_flair:
+            text: eliminat
+            css_class: eliminat
+            template_id: 80f080d6-1873-11eb-a6fd-0ef7e5bf6799
+    comment: "\
+        El coet que et duia cap a la lluna ha explotat \U0001F4A5 i has mort com un heroi. Has quedat eliminat del concurs i el nostre bot ja no processarà més missatges teus. Fins al pròxim llançament, Apa-siau!"
+---
+# Eliminar jugador - Actualitzar la ID i la template_id
+    type: comment
+    parent_submission:
+        id: jkucw2
+    is_top_level: true
+    author:
+        flair_template_id: 80f080d6-1873-11eb-a6fd-0ef7e5bf6799
+    action: filter
