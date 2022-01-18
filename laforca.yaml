@@ -1,0 +1,111 @@
+# (F/1) La Forca, funcionament, cercador de paraules: https://www.paraulesamb.com/
+type: submission
+title (includes): ['lletres']
+author:
+    name: ['AutoModerator', 'catsubreddits']
+set_flair: "Joc de La Forca"
+comment: | 
+         * La lletra ha d'estar al principi entre parèntesis i en majúscules, exemple, `(C) i text opcional`.
+         * La resposta ha d'estar al principi del comentari amb `r=`, exemple, `r=cotxe i text opcional`.
+         * Només una resposta o lletra per comentari, si voleu demanar 3 lletres, heu de fer 3 comentaris diferents.
+         * Si no teniu resposta de l'automoderador, vol dir que la lletra o paraula no és la correcta.
+---
+# (F/2) La Forca, resposta
+type: comment
+is_top_level: true
+body (starts-with): ['r=Espurna']
+parent_submission: 
+       set_flair: "Resolt per {{author}}"
+       overwrite_flair: true
+comment: |
+         Enhorabona **{{author}}**, has guanyat la partida, la paraula era **Espurna**.
+---
+# (F/3) La Forca, lletres prohibides B,C,D,F,G,H,J,K,L,M,N,P,Q,R,S,T,V,W,X,Y,Z,Ç,L·L,A,E,I,O,U
+type: comment
+is_top_level: true
+body (starts-with, case-sensitive): ['(Q)', '(T)', '(G)', '(J)', '(V)', '(B)']
+parent_submission: 
+       set_flair: "Algú ha estat sentenciat/da!"
+       overwrite_flair: true
+author:
+    overwrite_flair: true
+    set_flair:
+        text: eliminat
+        css_class: eliminat
+        template_id: 80f080d6-1873-11eb-a6fd-0ef7e5bf6799
+comment: |
+          **Has estat sentenciat/da a la forca!** Els teus nous missatges seran ignorats pel bot.
+---
+# (F/4) La Forca, lletra correcta
+type: comment
+is_top_level: true
+body (starts-with, case-sensitive): ['(E)']
+comment: |
+         Aquesta és la posició de la lletra:
+
+         |E|...|...|...|...|...|...|
+         |:-|:-|:-|:-|:-|:-|:-|
+---
+type: comment
+is_top_level: true
+body (starts-with, case-sensitive): ['(S)']
+message: Pista secreta = S'empra a l'aigua.
+comment: |
+         Aquesta és la posició de la lletra:
+
+         |...|S|...|...|...|...|...|
+         |:-|:-|:-|:-|:-|:-|:-|
+---
+type: comment
+is_top_level: true
+body (starts-with, case-sensitive): ['(P)']
+comment: |
+         Aquesta és la posició de la lletra:
+
+         |...|...|P|...|...|...|...|
+         |:-|:-|:-|:-|:-|:-|:-|
+---
+type: comment
+is_top_level: true
+body (starts-with, case-sensitive): ['(U)']
+comment: |
+         Aquesta és la posició de la lletra:
+
+         |...|...|...|U|...|...|...|
+         |:-|:-|:-|:-|:-|:-|:-|
+---
+type: comment
+is_top_level: true
+body (starts-with, case-sensitive): ['(R)']
+comment: |
+         Aquesta és la posició de la lletra:
+
+         |...|...|...|...|R|...|...|
+         |:-|:-|:-|:-|:-|:-|:-|
+---
+type: comment
+is_top_level: true
+body (starts-with, case-sensitive): ['(N)']
+comment: |
+         Aquesta és la posició de la lletra:
+
+         |...|...|...|...|...|N|...|
+         |:-|:-|:-|:-|:-|:-|:-|
+---
+type: comment
+is_top_level: true
+body (starts-with, case-sensitive): ['(A)']
+comment: |
+         Aquesta és la posició de la lletra:
+
+         |...|...|...|...|...|...|A|
+         |:-|:-|:-|:-|:-|:-|:-|
+---
+# (F/5) La Forca, usuaris eliminats. Actualitzar la ID i la template_id
+type: comment
+parent_submission:
+    id: ???
+is_top_level: true
+author:
+    flair_template_id: 80f080d6-1873-11eb-a6fd-0ef7e5bf6799
+action: filter
