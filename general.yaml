@@ -1,0 +1,78 @@
+# Funcions de l'automoderador.
+---
+# (1) Usuaris en quarantena. Segons com sigui el comportament: aplicar ban, aprovar els missatges o aixecar shadowban.
+    type: comment
+    author:
+        name: ['Melchiazedeck','Frijolo_Brown','AggravatingAverage60', 'AzorixEternal961_GG', 'Atomic_Pizza_', 'Ok-Syrup3391', 'PagePsychological716', 'GrognarEsp', 'fusilover', 'Anaxaron', '_xXUngelXx_', 'kitsuwastaken']
+    action: filter
+---
+# (2) Filtrar una publicació quan s'arribi a 5 reports mínim.
+    type: any
+    reports: 5
+    action: filter
+    action_reason: Límit de reports
+    modmail: El següent ítem publicat per /u/{{author}} ha estat reportat. Reviseu quin és el motiu i a veure si és inadequat.
+---
+# (3) Filtrar els posts d'aquells que tinguin un compte de manco de 3 dies o un karma baix. Per evitar trolls.
+    type: submission
+    author:
+        account_age: "< 3 days"
+        combined_karma: "< 10"
+        satisfy_any_threshold: true
+    action: filter
+    comment: El teu compte ha de tenir 3 dies com a mínim i un karma positiu de +10 per a obrir fils a r/Catalunya. Mentrestant pots publicar comentaris lliurement pel fòrum, i així acumularàs el temps i karma necessari per a publicar fils.
+    comment_stickied: true
+---
+# (4) Filtrar els posts que tenguin paraules clau amb potencialitat de ser brossa o estiguin tot en majúscules.
+    type: submission
+    title (case-sensitive, regex): '\b[A-Z0-9]{5,}\b(?<!LGTBI)(?<!BRIMO)(?<!LGTBQ+)(?<!LGBTI)'
+    action: filter
+    comment: No està permès publicar paraules esquer en majúscules (Ex:ATENCIÓ, NOU, INCREÏBLE...), ni publicar títols sencers en majúscules (Ex:AVUI HE MENJAT BROU!...). Revisa l'escriptura i torna a provar, gràcies.
+    comment_stickied: true
+    modmail: El següent ítem publicat per /u/{{author}} ha estat filtrat per potencial spam. Aproveu-lo si és adequat.
+---
+# (5) Col·laborador aprovat. Capacitat d'esborrar.
+    type: comment
+    body (includes-word): ['sudo/esborrar', 'sudo/brossa']
+    author:
+        is_contributor: true
+    parent_submission:
+        action: filter
+        overwrite_flair: true
+        set_flair: ['Clos temporalment']
+    message: El fil que ens has indicat s'ha retirat temporalment de r/Catalunya. Gràcies per ajudar-nos a mantenir la comunitat neta. *Acció emesa per {{author}} - Col·laborador aprovat.*
+---
+# (6) Col·laborador aprovat. Capacitat nsfw
+    type: comment
+    body (includes-word): ['sudo/sensible']
+    author:
+        is_contributor: true
+    parent_submission:
+        set_nsfw: true
+    message: El fil que ens has indicat s'ha marcat com a contingut sensible (NSFW). Gràcies per ajudar-nos a mantenir la comunitat neta. *Acció emesa per {{author}} - Col·laborador aprovat.*
+---
+# (7) Col·laborador aprovat. Capacitat contingut original
+    type: comment
+    body (includes-word): ['sudo/original']
+    author:
+        is_contributor: true
+    parent_submission:
+        set_original_content: true
+    message: El fil que ens has indicat s'ha marcat com a contingut original (OC). Gràcies per ajudar-nos a mantenir la comunitat ordenada. *Acció emesa per {{author}} - Col·laborador aprovat.*
+---
+# (8) Filtrar els posts de half Chinese half Filipino.
+    type: submission
+    title (includes): ['half Chinese half Filipino', 'Filipino']
+    action: remove
+    comment_stickied: true
+    modmail: El següent ítem publicat per /u/{{author}} ha estat filtrat per potencial spam. Aproveu-lo si és adequat.
+---
+# (9) Assignar bandereta de AMA oficial a autor confirmat
+    type: submission
+    author:
+        name: ['rocaguinarda']
+    title (includes): ['ama', 'AMA']
+    set_sticky: false
+    overwrite_flair: true
+    set_flair:
+       template_id: 4298299e-46ea-11e9-a17c-0e43fd74a070
