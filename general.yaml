@@ -3,7 +3,7 @@
 # (1) Usuaris en quarantena. Segons com sigui el comportament: aplicar ban, aprovar els missatges o aixecar shadowban.
     type: comment
     author:
-        name: ['Melchiazedeck','Frijolo_Brown','AggravatingAverage60', 'AzorixEternal961_GG', 'Atomic_Pizza_', 'Ok-Syrup3391', 'PagePsychological716', 'GrognarEsp', 'fusilover', 'Anaxaron', '_xXUngelXx_', 'kitsuwastaken']
+        name: ['user1','user2']
     action: filter
 ---
 # (2) Filtrar una publicació quan s'arribi a 5 reports mínim.
@@ -70,7 +70,7 @@
 # (9) Assignar bandereta de AMA oficial a autor confirmat
     type: submission
     author:
-        name: ['rocaguinarda']
+        name: ['user1']
     title (includes): ['ama', 'AMA']
     set_sticky: false
     overwrite_flair: true
